@@ -181,8 +181,8 @@ TheShodo.Shodo.StrokeManager.prototype.start = function() {
     var handCanvasObject = $(this.eventCaptureTarget);
     var handCanvas = handCanvasObject.get(0);
     $('body .content')
-        .live('mousemove', function(e) {
-            handCanvasObject.trigger('mouseup', e);
+        .live('touchmove', function(e) { //  mousemove
+            handCanvasObject.trigger('touchend', e); // mouseup
         });
 
     var self = this;
