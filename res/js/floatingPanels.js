@@ -13,7 +13,7 @@ TheShodo.Shodo.Write.PanelSelectBrush = function(selectedBrush) {
     this.selectorOrContent = $('#floating-panel-content-select-brush').html();
     this.selectedBrush = selectedBrush || 'Medium';
     this.buttons = [{
-        label: TheShodo.Shodo.Resources.Write.String.Panel_OK || 'OK',
+        label: TheShodo.Shodo.Resources.Write.String.Panel_OK || '好',
         onClick: function(sender, e) {
             sender.onBrushSelected(sender.selectedBrush);
             sender.close();
@@ -21,7 +21,7 @@ TheShodo.Shodo.Write.PanelSelectBrush = function(selectedBrush) {
     }];
     this.hasButtons = true;
 }
-TheShodo.Shodo.Write.PanelSelectBrush.prototype = new TheShodo.FloatingPanel(TheShodo.Shodo.Resources.Write.String.Panel_SelectBrush_Title || "Brush Selection");
+TheShodo.Shodo.Write.PanelSelectBrush.prototype = new TheShodo.FloatingPanel(TheShodo.Shodo.Resources.Write.String.Panel_SelectBrush_Title || "笔号选择");
 TheShodo.Shodo.Write.PanelSelectBrush.prototype.onBeforePanelShow = function(selectedBrush) {
     var self = this;
     this.selectedBrush = selectedBrush;
@@ -54,7 +54,7 @@ TheShodo.Shodo.Write.PanelSelectInk = function(selectedOpacity, selectedColor) {
     this.selectedOpacity = selectedOpacity || 1.0;
     this.selectedColor = selectedColor || 0x00;
     this.buttons = [{
-        label: TheShodo.Shodo.Resources.Write.String.Panel_OK || 'OK',
+        label: TheShodo.Shodo.Resources.Write.String.Panel_OK || '好',
         onClick: function(sender, e) {
             sender.onInkSelected(sender.selectedOpacity, sender.selectedColor);
             sender.close();
@@ -62,7 +62,7 @@ TheShodo.Shodo.Write.PanelSelectInk = function(selectedOpacity, selectedColor) {
     }];
     this.hasButtons = true;
 }
-TheShodo.Shodo.Write.PanelSelectInk.prototype = new TheShodo.FloatingPanel(TheShodo.Shodo.Resources.Write.String.Panel_SelectInk_Title || "Ink Seletion");
+TheShodo.Shodo.Write.PanelSelectInk.prototype = new TheShodo.FloatingPanel(TheShodo.Shodo.Resources.Write.String.Panel_SelectInk_Title || "墨色选择");
 TheShodo.Shodo.Write.PanelSelectInk.prototype.onBeforePanelShow = function(selectedOpacity, selectedColor) {
     var self = this;
     this.selectedOpacity = selectedOpacity;
