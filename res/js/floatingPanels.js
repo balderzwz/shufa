@@ -84,7 +84,7 @@ TheShodo.Shodo.Write.PanelSelectInk.prototype.onBeforePanelShow = function(selec
             $(this).parent().siblings().removeClass('selected');
             $(this).parent().addClass('selected');
 
-            self.selectedColor = parseInt($(this).parent().attr('data-color'), 16);
+            self.selectedColor = parseInt($('img',this).parent().attr('data-color'), 16);
         })
         .end()
 
