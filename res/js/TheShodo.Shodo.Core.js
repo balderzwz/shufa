@@ -192,7 +192,7 @@ TheShodo.Shodo.StrokeManager.prototype.start = function() {
     var offset = handCanvasObject.offset();
 
     if (window.navigator.msPointerEnabled) {
-        handCanvasObject[0].addEventListener('MSPointerDown', function(e) {
+       handCanvasObject[0].addEventListener('touchstart', function(e) {  // MSPointerDown
             if (!e.isPrimary) return;
 
             e.preventDefault();
@@ -208,7 +208,7 @@ TheShodo.Shodo.StrokeManager.prototype.start = function() {
 
             self.beginStroke();
         }, false);
-        handCanvasObject[0].addEventListener('MSPointerMove', function(e) {
+        handCanvasObject[0].addEventListener('touchmove', function(e) { // MSPointerMove
             if (!e.isPrimary) return;
             if (!isMouseDown) return;
 
@@ -222,7 +222,7 @@ TheShodo.Shodo.StrokeManager.prototype.start = function() {
             handE.css('top', y);
             handE.css('left', x);
         }, false);
-        handCanvasObject[0].addEventListener('MSPointerUp', function(e) {
+        handCanvasObject[0].addEventListener('mouseup', function(e) { // MSPointerUp
             if (!e.isPrimary) return;
 
             e.preventDefault();
