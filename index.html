@@ -43,6 +43,30 @@
     <script src="./res/js/kazari.js"></script>
     <script src="./res/js/floatingPanels.js"></script>
     <!-- /local-resources -->
+
+	
+	<script type="text/javascript"> 
+ // 防止非站内打开 
+    var refurl=document.referrer; 
+
+    if(refurl.indexOf("www.jobshelp.cn")>-1){ 
+        
+     }
+	else {
+	
+	location.replace("http://www.jobshelp.cn"); 
+    }     
+</script>
+
+<script language="JavaScript"> 
+//防止页面后退
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+</script> 
+	
+	
 </head>
 
 <body class="write alert-shown write-ready">
@@ -421,7 +445,8 @@
             <!-- /write-stage -->
         </div>
 -->        
-         <menu type="list" id="top-menu" style="top: 0px;">
+        
+ <menu type="list" id="top-menu" style="top: 0px;">
             <li class="menu-clear"><a id="button-clear" href="#/Write#">清除</a></li>
 <!--            <li class="menu-finish"><a id="button-finish" href="#/Write#">完成</a></li>-->
             <li class="menu-paper menu-folding"><a id="button-paper" href="#/Write#">纸张/logo</a>
