@@ -9,7 +9,7 @@
  * (common.css) SXGA override
  * ========================== */
 body.screen-mode-sxga {
-	position: fixed;
+	
 	min-height: 796px;
 	max-height: 896px;
 }
@@ -25,7 +25,7 @@ body.screen-mode-sxga {
  * (common.css) WXGA override
  * ========================== */
 body.screen-mode-wxga {
-	position: fixed;
+	
 	min-height: 672px;
 	max-height: 776px;
 }
